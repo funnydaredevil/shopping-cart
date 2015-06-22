@@ -16,7 +16,9 @@
     "watchify": "~2.1.0",
     "protractor": "^2.1.0",
     "protractor-screenshot-reporter": "0.0.5",
-    "xmlhttprequest": "^1.7.0"
+    "xmlhttprequest": "^1.7.0",
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
   },
   "scripts": {
     "start": "watchify -o js/bundle.js -v -d .",

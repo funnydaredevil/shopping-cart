@@ -3,7 +3,7 @@ exports.config = {
         capabilities: {
         browserName: 'chrome'
     },
-    baseUrl: './index.html',
+    baseUrl: 'http://localhost:3030',
     framework: 'jasmine',
     onPrepare: function () {
         browser.ignoreSynchronization = true;
