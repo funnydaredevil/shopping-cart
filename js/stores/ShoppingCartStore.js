@@ -8,7 +8,7 @@ var _products = {}, _cartVisible = false;
 
 function add(sku, update) {
   update.quantity = sku in _products ? _products[sku].quantity + 1 : 1;
-  _products[sku] = _.extend({}, _products[sku], update)
+  _products[sku] = _.extend({}, _products[sku], update);
 }
 
 function setCartVisible(cartVisible) {
@@ -32,7 +32,7 @@ var ShoppingCartStore = _.extend({}, EventEmitter.prototype, {
 
   getCartTotal: function() {
     var total = 0;
-    for(product in _products){
+    for(var product in _products){
       if(_products.hasOwnProperty(product)){
         total += _products[product].price * _products[product].quantity;
       }

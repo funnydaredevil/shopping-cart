@@ -4,25 +4,25 @@ var ShoppingCartConstants = require('../constants/ShoppingCartConstants');
 var _ = require('underscore');
 
 // Define initial data points
-var _product = {}, _selected = null;
+var _products = {}, _selected = null;
 
 // Method to load product data from mock API
 function loadProductData(data) {
-  _product = data[0];
+  _products = data;
   _selected = data[0].stock[0];
 }
 
 // Method to set the currently selected product variation
 function setSelected(index) {
-  _selected = _product.stock[index];
+  _selected = _products[0].stock[index];
 }
 
 
 // Extend ProductStore with EventEmitter to add eventing capabilities
 var ProductStore = _.extend({}, EventEmitter.prototype, {
 
-  getProduct: function() {
-    return _product;
+  getProducts: function() {
+    return _products;
   },
 
   getSelected: function(){

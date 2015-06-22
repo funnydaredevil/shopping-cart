@@ -30,6 +30,42 @@ module.exports = {
 
           }
         ]
+      },
+      {
+        id: '123124',
+        name: 'Coca Cola',
+        image: 'https://pbs.twimg.com/profile_images/493592781575557120/H7R37Fc8_400x400.jpeg',
+        description: 'Coca-Cola is a carbonated soft drink sold in stores, restaurants, and vending machines throughout the world. It is produced by The Coca-Cola Company of Atlanta, Georgia, and is often referred to simply as Coke (a registered trademark of The Coca-Cola Company in the United States since March 27, 1944). Originally intended as a patent medicine when it was invented in the late 19th century by John Pemberton, Coca-Cola was bought out by businessman Asa Griggs Candler, whose marketing tactics led Coke to its dominance of the world soft-drink market throughout the 20th century.',
+        stock: [
+          {
+            sku: '987981',
+            type: '330ml Bottle',
+            price: 1.75,
+            left: 136
+
+          },
+          {
+            sku: '987982',
+            type: '500ml Bottle',
+            price: 2.00,
+            left: 14
+
+          },
+          {
+            sku: '987983',
+            type: '1000ml Bottle',
+            price: 3.50,
+            left: 200
+
+          },
+          {
+            sku: '987984',
+            type: '2000ml Bottle',
+            price: 4.50,
+            left: 2
+
+          }
+        ]
       }
     ]));
   }

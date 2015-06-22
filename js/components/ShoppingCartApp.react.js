@@ -7,7 +7,7 @@ var ShoppingCart = require('./ShoppingCart.react');
 // Method to retrieve state from Stores
 function getCartState() {
   return {
-    product: ProductStore.getProduct(),
+    products: ProductStore.getProducts(),
     selectedProduct: ProductStore.getSelected(),
     cartItems: ShoppingCartStore.getCartItems(),
     cartCount: ShoppingCartStore.getCartCount(),
@@ -38,10 +38,18 @@ var ShoppingCartApp = React.createClass({
 
   // Render our child components, passing state via props
   render: function() {
+    var selectedProduct = this.state.selectedProduct;
+    var cartItems = this.state.cartItems;
+    var productsNode = this.state.products.map(function(product){
+      return(
+        <Product key={product.id} product={product} cartitems={cartItems} selected={selectedProduct} />
+        // <Product product={product} cartitems={this.state.cartItems} selected={this.state.selectedProduct} />
+      );
+    });
     return (
       <div className="shopping-cart-app">
         <ShoppingCart products={this.state.cartItems} count={this.state.cartCount} total={this.state.cartTotal} visible={this.state.cartVisible} />
-        <Product product={this.state.product} cartitems={this.state.cartItems} selected={this.state.selectedProduct} />
+        {productsNode}
       </div>
     );
   },
